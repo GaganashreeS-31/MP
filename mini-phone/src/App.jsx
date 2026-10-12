@@ -13,7 +13,7 @@ function App() {
   const [authenticated, setAuthenticated] = useState(false)
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/auth-check', { credentials: 'include' })
+    fetch('https://mp-6t23.onrender.com/api/auth-check', { credentials: 'include' })
       .then((res) => res.json())
       .then((data) => {
         setAuthenticated(data.authenticated)

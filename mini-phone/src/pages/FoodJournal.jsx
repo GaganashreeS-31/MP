@@ -18,13 +18,13 @@ function FoodJournal() {
   const [savedFoods, setSavedFoods] = useState([])
 
   const loadDashboard = () => {
-    fetch('http://localhost:5000/api/food-log/today', { credentials: 'include' })
+    fetch('https://mp-6t23.onrender.com/api/food-log/today', { credentials: 'include' })
       .then((res) => res.json())
       .then((data) => setDashboard(data))
   }
 
   const loadProgress = (selectedRange, start, end) => {
-    let url = `http://localhost:5000/api/food-log/progress?range=${selectedRange}`
+    let url = `https://mp-6t23.onrender.com/api/food-log/progress?range=${selectedRange}`
     if (selectedRange === 'custom' && start && end) {
       url += `&start=${start}&end=${end}`
     }
@@ -34,13 +34,13 @@ function FoodJournal() {
   }
 
   const loadSavedFoods = (query) => {
-    fetch(`http://localhost:5000/api/food-log/saved-foods?query=${encodeURIComponent(query)}`, { credentials: 'include' })
+    fetch(`https://mp-6t23.onrender.com/api/food-log/saved-foods?query=${encodeURIComponent(query)}`, { credentials: 'include' })
       .then((res) => res.json())
       .then((data) => setSavedFoods(data))
   }
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/profile', { credentials: 'include' }).then((res) => {
+    fetch('https://mp-6t23.onrender.com/api/profile', { credentials: 'include' }).then((res) => {
       if (res.status === 404) {
         navigate('/food-setup')
       } else {
@@ -71,7 +71,7 @@ function FoodJournal() {
   }
 
   const quickAdd = (food) => {
-    fetch('http://localhost:5000/api/food-log/quick-add', {
+    fetch('https://mp-6t23.onrender.com/api/food-log/quick-add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',body: JSON.stringify(food),
@@ -86,7 +86,7 @@ function FoodJournal() {
     setInput('')
     setLoading(true)
 
-    fetch('http://localhost:5000/api/food-log', {
+    fetch('https://mp-6t23.onrender.com/api/food-log', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',

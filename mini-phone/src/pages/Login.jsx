@@ -8,7 +8,7 @@ function Login({ onLoginSuccess }) {
     e.preventDefault()
     setError('')
 
-    fetch('http://localhost:5000/api/login', {
+    fetch('https://mp-6t23.onrender.com/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',

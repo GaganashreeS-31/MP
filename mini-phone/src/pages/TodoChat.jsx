@@ -15,7 +15,7 @@ function TodoChat() {
     setInput('')
     setLoading(true)
 
-    fetch('http://localhost:5000/api/todo-chat', {
+    fetch('https://mp-6t23.onrender.com/api/todo-chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: userMessage }),

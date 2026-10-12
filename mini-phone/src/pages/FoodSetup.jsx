@@ -13,7 +13,7 @@ function FoodSetup() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:5000/api/profile', {
+    fetch('https://mp-6t23.onrender.com/api/profile', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',      body: JSON.stringify({

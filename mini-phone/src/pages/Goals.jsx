@@ -20,13 +20,13 @@ function Goals() {
 
   
   const loadGoals = () => {
-    fetch('http://localhost:5000/api/goals', { credentials: 'include' })
+    fetch('https://mp-6t23.onrender.com/api/goals', { credentials: 'include' })
       .then((res) => res.json())
       .then((data) => setGoals(data))
   }
 
   const loadProgress = (selectedRange, start, end) => {
-    let url = `http://localhost:5000/api/todos/progress?range=${selectedRange}`
+    let url = `https://mp-6t23.onrender.com/api/todos/progress?range=${selectedRange}`
     if (selectedRange === 'custom' && start && end) {
       url += `&start=${start}&end=${end}`
     }
@@ -36,7 +36,7 @@ function Goals() {
   }
 
   const deleteGoal = (id) => {
-  fetch(`http://localhost:5000/api/goals/${id}`, {
+  fetch(`https://mp-6t23.onrender.com/api/goals/${id}`, {
     method: 'DELETE',
     credentials: 'include',
   }).then(() => loadGoals())
@@ -60,7 +60,7 @@ function Goals() {
 
   const handleAddGoal = (e) => {
     e.preventDefault()
-    fetch('http://localhost:5000/api/goals', {
+    fetch('https://mp-6t23.onrender.com/api/goals', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -87,7 +87,7 @@ function Goals() {
     setInput('')
     setLoading(true)
 
-    fetch('http://localhost:5000/api/todo-chat', {
+    fetch('https://mp-6t23.onrender.com/api/todo-chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
