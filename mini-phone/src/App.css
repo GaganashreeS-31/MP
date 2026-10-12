@@ -1,0 +1,287 @@
+.phone-screen {
+  max-width: 420px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px;
+  background: #111319;
+  color: #f2f2f2;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+h1 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+.phone-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.app-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 8px;
+  background: #1c1f27;
+  border-radius: 16px;
+  opacity: 0.6;
+}
+
+.app-icon {
+  font-size: 1.8rem;
+}
+
+.app-name {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.app-status {
+  font-size: 0.6rem;
+  color: #999;
+}
+.backend-status {
+  font-size: 0.75rem;
+  color: #7fd88f;
+  margin-top: -12px;
+  margin-bottom: 20px;
+}
+.app-tile {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.back-link {
+  color: #7fd88f;
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.goal-form input,
+.goal-form select,
+.goal-form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.goal-form button {
+  background: #7fd88f;
+  color: #111319;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.goal-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: #1c1f27;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 300px;
+  margin-bottom: 16px;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  border-radius: 14px;
+  max-width: 80%;
+  font-size: 0.85rem;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background: #7fd88f;
+  color: #111319;
+}
+
+.chat-bubble.ai {
+  align-self: flex-start;
+  background: #1c1f27;
+  color: #f2f2f2;
+}
+
+.chat-form {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.chat-form button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #7fd88f;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #7fd88f;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+
+.saved-food-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #1c1f27;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.saved-food-item button {
+  background: #7fd88f;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.sidebar-panel {
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #1c1f27;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow-y: auto;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.range-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.range-buttons button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2e3a;
+  color: white;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.range-buttons button.active {
+  background: #7fd88f;
+  color: #111319;
+  font-weight: 600;
+}
+
+.custom-range {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.custom-range input,
+.custom-range button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+.page-subtitle {
+  color: #999;
+  font-size: 0.8rem;
+  margin: -12px 0 20px 0;
+}
+.delete-btn {
+  margin-top: 6px;
+  background: #e85c5c;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: white;
+}

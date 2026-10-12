@@ -1,0 +1,6 @@
+mini-phone/node_modules/ 
+mini-phone/dist/ 
+mini-phone-backend/venv/ 
+mini-phone-backend/.env 
+mini-phone-backend/__pycache__/ 
+mini-phone-backend/hash_password.py 
